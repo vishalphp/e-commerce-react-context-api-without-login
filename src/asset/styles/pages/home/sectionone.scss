@@ -1,0 +1,33 @@
+
+.section-custom-1 {
+	min-height: 36.45833vw;
+}
+
+.section-custom-1 .material-parallax img {
+    bottom: 0;
+    opacity: 1;
+}
+.box-info-renee-subtitle {
+    font-weight: 600;
+    letter-spacing: .1em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.box-info-renee-title {
+    font-weight: 500;
+    letter-spacing: .075em;
+    text-transform: none;
+}
+.box-info-renee-text {
+    max-width: 462px;
+    margin-left: 0;
+    margin-right: auto;
+	margin-bottom: 40px;
+}
+.box-info-renee-link{
+	background: #005596;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-transform: capitalize;
+}

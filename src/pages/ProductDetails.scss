@@ -1,0 +1,78 @@
+.wraperproduct{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.wraperproduct .leftimage, .leftscroll, .fullimage{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fullimage{
+    flex: 2;
+}
+.leftscroll{
+    flex-direction: column;
+}
+.wraperproduct .rightdetails{
+    flex: 2;
+    align-items: start;
+    display: flex;
+    justify-content: space-around;
+}
+.imageslist{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.imageslist img{
+    width: 40px;
+}
+.productwerp{
+    max-width: 600px;
+}
+h1{
+    font-size: 26px;
+    text-transform: capitalize;
+    line-height: 28px;
+}
+.ratingblock{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ratingblock img{
+    width: 25px;
+    margin-right: 6px;
+}
+.rate{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.proddescr{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.table-product-stepper{
+    max-width: 120px;
+}
+.table-product-stepper .stepper-arrow {
+    line-height: 36px;
+    border-radius: 6px;
+    border: 1px solid #e1e1e1;
+}

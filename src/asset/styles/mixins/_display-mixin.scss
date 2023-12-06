@@ -1,0 +1,31 @@
+@mixin displaynone{
+    display: none;
+}
+
+@mixin displayblock{
+    display: block;
+}
+
+@mixin displayinlineblock{
+    display: inline-block;
+}
+
+@mixin displayflex{
+    display: flex;
+    @content;
+}
+
+@mixin displayinlineflex{
+    display: inline-flex;
+    @content;
+}
+
+//justify content
+@mixin justify-content-flexend{
+justify-content: flex-end;
+}
+
+@mixin flex($first, $second, $third, $fourth){
+    flex: $first $second $third;
+    max-width: $fourth;
+}

@@ -1,0 +1,36 @@
+.box-radio {
+    text-align: left;
+    padding: 28px 15px;
+    border: 1px solid #e1e1e1;
+}
+.radio-panel .radio-inline {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #151515;
+}
+.table-checkout tr {
+    border-color: #e1e1e1;
+}
+.table-custom tr {
+    border: 1px solid;
+}
+.table-checkout td:first-child {
+    min-width: 190px;
+}
+.table-checkout td {
+    font-size: 18px;
+}
+.table-checkout td {
+    padding: 22px 50px 22px 24px;
+}
+.table-checkout td {
+    letter-spacing: .05em;
+    color: #151515;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.error{
+ border-color: #c70034 !important;
+}

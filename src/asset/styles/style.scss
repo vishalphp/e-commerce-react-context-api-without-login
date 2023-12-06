@@ -1,0 +1,471 @@
+@import './variable';
+@import '../styles/mixins/display-mixin';
+@import '../styles/mixins/position-mixin';
+@import '../styles/mixins/space-mixin';
+
+
+
+/*
+@import '../form';
+@import '../group';
+*/
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: .05em;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: $color-light-gray;
+    background-color: $color-white;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+h6, .heading-6 {
+    font-size: 16px;
+}
+.button {
+    padding: 14px 34px;
+}
+.button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 2;
+    border: 2px solid;
+    border-radius: 6px;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+    transition: all 250ms ease-in-out;
+}
+.button-zakaria::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    padding-bottom: 110%;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    transition: inherit;
+    pointer-events: none;
+    z-index: -1;
+}
+.button-default-outline-2, .button-default-outline-2:focus {
+    color: #151515;
+    background-color: transparent;
+    border-color: $color-blue;
+}
+.button-primary, .button-primary:focus {
+    color: #ffffff;
+    background-color: $color-blue;
+    border-color: $color-blue;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.zindexinc{
+    z-index: 999999;
+    cursor: pointer;
+}
+.zindexinc svg, .zindexinc path{
+    pointer-events: none;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+   @include displayblock;
+}
+
+a, a:focus, a:active {
+    color: $color-blue;
+}
+a, a:focus, a:active, a:hover {
+    text-decoration: none;
+}
+a {
+    transition: all 0.25s ease-in-out;
+}
+a[href*='tel'], a[href*='mailto'] {
+    white-space: nowrap;
+}
+img {
+    @include displayblock;
+    max-width: 100%;
+     
+}
+ul li, ol li {
+    @include displayblock;
+}
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h5, .heading-5 {
+    text-transform: none;
+}
+h5, .heading-5, .heading-7, .product-dawn-price, .event-classic-hours {
+    font-size: 16px;
+    line-height: 1.66667;
+}
+h6, .heading-6 {
+    letter-spacing: .075em;
+    text-transform: none;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.unit-spacing-sm {
+    margin-bottom: -10px;
+    margin-left: -20px;
+}
+.unit {
+    @include displayflex;
+    flex: 0 1 100%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+.unit-spacing-sm > * {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.unit-left, .unit-right {
+    @include flex(0 , 0, auto, 50%);
+}
+.unit > * {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.unit-body {
+    flex: 0 1 auto;
+}
+h1, h2, h3, h4, h5, h6, [class^='heading-'] {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: $color-black;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, [class^='heading-'] a {
+    color: inherit;
+}
+html .group-middle {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+html .group-xs {
+    margin-bottom: -15px;
+    margin-left: -15px;
+}
+html .group-md > * {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+html .group-xs > * {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+html .group-md { 
+    margin-left: -25px;
+}
+.table-cart-stepper {
+    max-width: 123px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stepper {
+    position: relative;
+    display: block;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto, .col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12, .col-xxl, .col-xxl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+.row {
+    @include displayflex{
+        flex-wrap: wrap;
+    }
+    
+}
+footer .row{
+    flex-wrap: nowrap;
+}
+.row-md-50 > * {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.col-lg-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.inset-xl-right-55 {
+    padding-right: 55px;
+}
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+}
+h2, .heading-2, .counter-classic-number .symbol {
+    font-size: 55px;
+}
+html .group-sm {
+    margin-bottom: -10px;
+    margin-left: -20px;
+}
+.parallax-content {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    width: 100%;
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.aside-title {
+    padding-bottom: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
+}
+.col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-xl-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-lg-3 {
+     @extend .col-xl-3;
+}
+h3, .heading-3, .event-classic-date {
+    font-size: 36px;
+}
+.text-transform-capitalize {
+    text-transform: capitalize;
+}
+.flex-md-row {
+    flex-direction: row !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.product-minimal-figure {
+    display: block;
+    overflow: hidden;
+    background: $color-light-yellow-one-up;
+}
+.product-minimal-figure img {
+    width: 100%;
+    will-change: transform;
+    transition: all .3s ease;
+}
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.unit-body {
+    flex: 0 1 auto;
+}
+.product-minimal-title {
+    color: $color-black;
+}
+.product-minimal-price {
+    margin-top: 8px;
+}
+.product-minimal-price {
+    line-height: 1;
+    letter-spacing: .025em; 
+}
+.justify-content-md-between {
+    justify-content: space-between !important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+.inline{
+    display: inline;
+}
+.product-top-panel {
+    justify-content: space-between;
+}
+.product-top-panel {
+    @include displayflex{
+           justify-content: space-between;
+    }
+    flex-wrap: wrap;
+    align-items: center;
+    color: $color-black;
+}
+.select2-container, .select2-drop, .select2-search, .select2-search input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.select2-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.72;
+    letter-spacing: .05em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: transparent;
+}
+.select2-container .select2-choice {
+    display: block;
+    position: relative;
+    color: $color-black;
+    background-color: $color-white;
+    padding: 0 32px 0 0;
+    border-radius: 0;
+    text-decoration: none;
+}
+.select2-offscreen, .select2-offscreen:focus {
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    outline: 0 !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+input, button, select, textarea {
+    outline: none;
+}
+
+.button-zakaria {
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+.button-secondary, .button-secondary:focus {
+    color: $color-white;
+    background-color: #626469;
+    border-color: #626469;
+}
+.text-gray-500 {
+    color: #9b9b9b;
+}
+h3, .heading-3, .event-classic-date {
+    font-size: 36px;
+}
+.processbuttonbox .row{
+flex-direction: row-reverse;
+}
+.processbuttonbox a{
+    margin: 30px 0;
+}
+.midloader{
+    width: 20%;
+    margin: auto;
+    vertical-align: middle;
+    margin-top: 10%;
+}
+.loadingbg{
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+}
+.centerbox{
+    font-size: 40px;
+    width: 100%; 
+    text-align: center;
+    margin: 40px 0;
+    color: $color-blue;
+}
+.loadingwithoutbg{
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: transparent;
+    z-index:9999;
+}
+.customaddtocart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.customaddtocart svg{
+ font-size: 20px;
+ margin-right: 10px;
+}
+.addtobuttonbox{
+    margin-top: 25px;
+}
+.prprice{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}

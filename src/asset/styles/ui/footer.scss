@@ -1,0 +1,49 @@
+.footer-creative-2 {
+    background-color: #212121;
+}
+
+.footer-creative .row + .row {
+    margin-top: 100px;
+}
+
+.footer-creative-title {
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: .1em;
+    border: solid #c70034;
+    border-width: 0 0 0 3px;
+}
+h4, .heading-4, .quote-classic-text, .event-classic-month {
+    font-size: 24px;
+}
+.footer-creative-title + * {
+    margin-top: 34px;
+}
+.context-dark, .bg-gray-700, .bg-gray-3, .bg-brown-1, .bg-primary, .context-dark h1, .bg-gray-700 h1, .bg-gray-3 h1, .bg-brown-1 h1, .bg-primary h1, .context-dark h2, .bg-gray-700 h2, .bg-gray-3 h2, .bg-brown-1 h2, .bg-primary h2, .context-dark h3, .bg-gray-700 h3, .bg-gray-3 h3, .bg-brown-1 h3, .bg-primary h3, .context-dark h4, .bg-gray-700 h4, .bg-gray-3 h4, .bg-brown-1 h4, .bg-primary h4, .context-dark h5, .bg-gray-700 h5, .bg-gray-3 h5, .bg-brown-1 h5, .bg-primary h5, .context-dark h6, .bg-gray-700 h6, .bg-gray-3 h6, .bg-brown-1 h6, .bg-primary h6, .context-dark [class^='heading-'], .bg-gray-700 [class^='heading-'], .bg-gray-3 [class^='heading-'], .bg-brown-1 [class^='heading-'], .bg-primary [class^='heading-'] {
+    color: #ffffff;
+}
+.footer-creative .row + .row {
+    margin-top: 100px;
+}
+.footer-creative-2 .footer-creative-panel {
+    background-color: #2d2d2d;
+}
+.footer-creative-panel {
+    padding: 50px 0;
+}
+.contacts-holly a:hover, .footer-creative-list a:hover {
+    color: #c70034;
+}
+.contacts-holly a, .footer-creative-list a {
+    color: #fff;
+}
+.socialsm{
+    display: flex;
+    justify-content: end;
+}
+.socialsm li{
+    margin-right: 15px;
+    font-size: 20px;
+}

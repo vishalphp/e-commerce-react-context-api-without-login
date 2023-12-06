@@ -1,0 +1,31 @@
+@import '../styles/variable';
+@import '../styles/mixins/display-mixin';
+@import '../styles/mixins/position-mixin';
+
+.vk-search{
+	@include displaynone;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-aside-element{
+	align-items: center; 
+}
+.vk-navbar-search {
+    @include position-relative;
+    @include displayinlineflex;
+}
+.vk-navbar-static .vk-navbar-search-2 .vk-navbar-search-toggle {
+    @include position-relative;
+}
+.vk-navbar-static .vk-navbar-search-toggle {
+    @include displayinlineflex;
+    color: $color-black;
+}
+.vk-navbar-search-toggle {
+    background: none;
+    border: none;
+    @include displayinlineblock;
+    padding: 0;
+    outline: none;
+    outline-offset: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+}

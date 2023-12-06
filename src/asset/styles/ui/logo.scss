@@ -1,0 +1,47 @@
+@import '../variable';
+@import '../mixins/display-mixin';
+@import '../mixins/position-mixin';
+
+.vk-navbar-creative.vk-navbar-static .vk-navbar-panel {
+    @include flex(0%, 0%, 20%, 20%);
+}
+.vk-navbar-toggle {
+    @include displaynone;
+    @include position-relative;
+    width: 40px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 6px;
+    cursor: pointer;
+    color: $color-black;
+    background-color: transparent;
+    border: none;
+}
+.vk-navbar-toggle span:after, .vk-navbar-toggle span:before, .vk-navbar-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: $color-black;
+    backface-visibility: hidden;
+    border-radius: 0;
+}
+.vk-navbar-toggle span {
+   @include position-relative;
+   @include displayblock;
+    margin: auto;
+    transition: .3s all ease;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-brand {
+    @include displayflex;
+    align-items: center;
+    justify-content: start;
+}
+.vk-navbar-brand a {
+    @include displayblock;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-brand img {
+    max-width: 180px;
+    max-height: 86px;
+}
+.brand .brand-logo-dark {
+    @include displayblock;
+}

@@ -1,0 +1,403 @@
+@import '../styles/variable';
+
+input,
+button,
+select,
+textarea {
+	outline: none;
+}
+
+label {
+	margin-bottom: 0;
+}
+
+
+form {
+	margin-bottom: 0;
+}
+.form-wrap {
+	position: relative;
+}
+
+.form-wrap.has-error .form-input {
+	border-color: $color-red-error;
+}
+
+.form-wrap.has-focus .form-input {
+	border-color: $color-blue;
+}
+
+.form-wrap-recaptcha .form-validation {
+	top: 2px;
+	right: 5px;
+	bottom: auto;
+}
+
+.form-wrap {
+	margin-top: 20px;
+}
+
+
+.form-input {
+	display: block;
+	width: 100%;
+	min-height: 50px;
+	padding: 10px 0;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: .1em;
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: $color-black;
+	background-color: transparent;
+	background-image: none;
+	border-radius: 0;
+	transition: .3s ease-in-out;
+	border: 1px solid $color-light-yellow;
+	border-width: 0 0 1px 0;
+}
+
+@media (min-width: 768px) {
+	.form-input {
+		font-size: 15px;
+		min-height: 60px;
+		padding: 17px 0;
+	}
+}
+
+.form-input:focus {
+	outline: 0;
+}
+
+textarea.form-input {
+	height: 114px;
+	min-height: 60px;
+	max-height: 194px;
+	resize: vertical;
+}
+
+textarea.textarea-lg {
+	height: 140px;
+	max-height: 238px;
+}
+
+.form-label,
+.form-label-outside {
+	margin-bottom: 0;
+	color: $color-black;
+	font-weight: 600;
+}
+
+.form-label {
+	position: absolute;
+	text-align: left;
+	top: 25px;
+	right: 0;
+	left: 0;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: .1em;
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	transform: translateY(-50%);
+	will-change: transform;
+	pointer-events: none;
+	transition: .25s;
+	z-index: 9;
+}
+
+@media (min-width: 768px) {
+	.form-label {
+		top: 0px;
+		font-size: 15px;
+	}
+}
+
+.form-label.focus {
+	opacity: 0;
+}
+
+.form-label.auto-fill {
+	color: $color-black;
+}
+
+.form-label-outside {
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+	.form-label-outside {
+		position: static;
+	}
+	.form-label-outside, .form-label-outside.focus, .form-label-outside.auto-fill {
+		transform: none;
+	}
+}
+
+[data-x-mode='true'] .form-label {
+	pointer-events: auto;
+}
+
+.form-validation {
+	position: absolute;
+	right: 0;
+	bottom: 2px;
+	z-index: 11;
+	margin-top: 0;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 12px;
+	letter-spacing: 0;
+	color: $color-red-error;
+	transition: .3s;
+}
+
+.form-validation-left .form-validation {
+	top: 100%;
+	right: auto;
+	left: 0;
+}
+
+#form-output-global {
+	position: fixed;
+	bottom: 30px;
+	left: 15px;
+	z-index: 2000;
+	visibility: hidden;
+	transform: translate3d(-500px, 0, 0);
+	transition: .3s all ease;
+}
+
+#form-output-global.active {
+	visibility: visible;
+	transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 576px) {
+	#form-output-global {
+		left: 30px;
+	}
+}
+
+.form-output {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin-top: 2px;
+	transition: .3s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.form-output.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form-output.error {
+	color: $color-red-error;
+}
+
+.form-output.success {
+	color: $color-green-success;
+}
+
+.radio .radio-custom,
+.radio-inline .radio-custom,
+.checkbox .checkbox-custom,
+.checkbox-inline .checkbox-custom {
+	opacity: 0;
+}
+
+.radio .radio-custom, .radio .radio-custom-dummy,
+.radio-inline .radio-custom,
+.radio-inline .radio-custom-dummy,
+.checkbox .checkbox-custom,
+.checkbox .checkbox-custom-dummy,
+.checkbox-inline .checkbox-custom,
+.checkbox-inline .checkbox-custom-dummy {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	outline: none;
+	cursor: pointer;
+}
+
+.radio .radio-custom-dummy,
+.radio-inline .radio-custom-dummy,
+.checkbox .checkbox-custom-dummy,
+.checkbox-inline .checkbox-custom-dummy {
+	pointer-events: none;
+	background: $color-white;
+}
+
+.radio .radio-custom-dummy::after,
+.radio-inline .radio-custom-dummy::after,
+.checkbox .checkbox-custom-dummy::after,
+.checkbox-inline .checkbox-custom-dummy::after {
+	position: absolute;
+	opacity: 0;
+	transition: .22s;
+}
+
+.radio .radio-custom:focus,
+.radio-inline .radio-custom:focus,
+.checkbox .checkbox-custom:focus,
+.checkbox-inline .checkbox-custom:focus {
+	outline: none;
+}
+
+.radio input,
+.radio-inline input,
+.checkbox input,
+.checkbox-inline input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.radio-custom:checked + .radio-custom-dummy:after,
+.checkbox-custom:checked + .checkbox-custom-dummy:after {
+	opacity: 1;
+}
+
+.radio,
+.radio-inline {
+	position: relative;
+	text-align: left;
+	padding-left: 30px;
+	font-size: 15px;
+	line-height: 1.72;
+	letter-spacing: .025em;
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: $color-gray-one-down;
+	cursor: pointer;
+}
+
+.radio .radio-custom,
+.radio .radio-custom-dummy,
+.radio-inline .radio-custom,
+.radio-inline .radio-custom-dummy {
+	top: 2px;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	margin: 0;
+	border: 1px solid $color-light-yellow;
+	border-radius: 3px;
+}
+
+.radio .radio-custom::after,
+.radio .radio-custom-dummy::after,
+.radio-inline .radio-custom::after,
+.radio-inline .radio-custom-dummy::after {
+	content: '\f222';
+	font-family: "Material Design Icons";
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: $color-black;
+}
+
+.checkbox,
+.checkbox-inline {
+	position: relative;
+	text-align: left;
+	padding-left: 30px;
+	font-size: 15px;
+	line-height: 1.72;
+	letter-spacing: .025em;
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: $color-gray-one-down;
+	cursor: pointer;
+}
+
+.checkbox .checkbox-custom,
+.checkbox .checkbox-custom-dummy,
+.checkbox-inline .checkbox-custom,
+.checkbox-inline .checkbox-custom-dummy {
+	top: 2px;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	margin: 0;
+	border: 1px solid $color-light-yellow;
+	border-radius: 3px;
+}
+
+.checkbox .checkbox-custom::after,
+.checkbox .checkbox-custom-dummy::after,
+.checkbox-inline .checkbox-custom::after,
+.checkbox-inline .checkbox-custom-dummy::after {
+	content: '\f222';
+	font-family: "Material Design Icons";
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: $color-black;
+}
+
+.checkbox-inline {
+	margin-top: 30px;
+}
+
+.checkbox-inline + .group-button-1 {
+	margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+	.checkbox-inline + .group-button-1 {
+		margin-top: 60px;
+	}
+}
+
+.toggle-custom {
+	padding-left: 60px;
+	-webkit-appearance: none;
+}
+
+.toggle-custom:checked ~ .checkbox-custom-dummy::after {
+	background: $color-blue;
+	transform: translate(20px, -50%);
+}
+
+.toggle-custom ~ .checkbox-custom-dummy {
+	position: relative;
+	display: inline-block;
+	margin-top: -1px;
+	width: 44px;
+	height: 20px;
+	background: transparent;
+	cursor: pointer;
+}
+
+.toggle-custom ~ .checkbox-custom-dummy::after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	left: 0;
+	top: 50%;
+	background: #b7b7b7;
+	transform: translate(4px, -50%);
+	opacity: 1;
+	transition: .22s;
+}

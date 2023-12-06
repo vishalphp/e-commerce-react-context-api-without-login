@@ -1,0 +1,103 @@
+@import '../variable';
+@import '../mixins/position-mixin';
+@import '../mixins/display-mixin';
+@import '../mixins/space-mixin';
+
+.vk-navbar-wrap, .vk-navbar, .vk-menu, .vk-navbar-nav, .vk-navbar-panel, .vk-navbar-static .vk-menu, .vk-navbar-fixed .vk-navbar-nav-wrap, .vk-navbar-fixed .vk-navbar-submenu, .vk-navbar-project {
+    transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.vk-navbar-static {
+   @include displayblock;
+}
+.vk-navbar {
+    background: $color-white;
+}
+
+.vk-navbar-collapse-toggle {
+    @include position-relative;
+    width: 40px;
+    height: 48px;
+    line-height: 48px;
+   @include padding-interpolation(top, 0);
+   @include padding-interpolation(right, 6px);
+   @include padding-bottom(0);
+   @include padding-left(6px);
+    cursor: pointer;
+    color: $color-black;
+    @include displaynone;
+
+    & span{
+        @include position-absolute;
+        width: 6px;
+        height: 6px;
+        line-height: 6px;
+        text-align: center;
+        background: $color-black;
+        left: 50%;
+        @include margin-left(-3px);
+        border-radius: 50%;
+        transition: .3s all ease;
+        @include top(50%);
+        @include margin-top(-3px); 
+    }
+
+    & span:before{
+        @include position-absolute;
+        width: 6px;
+        height: 6px;
+        line-height: 6px;
+        text-align: center;
+        background: $color-black;
+        left: 50%;
+        @include margin-left(-3px);
+        border-radius: 50%;
+        transition: .3s all ease;
+        @include top(50%);
+        @include margin-top(-3px); 
+    }
+
+    & span:after{
+        @include position-absolute;
+        width: 6px;
+        height: 6px;
+        line-height: 6px;
+        text-align: center;
+        background: $color-black;
+        left: 50%;
+        @include margin-left(-3px);
+        border-radius: 50%;
+        transition: .3s all ease;
+        @include top(50%);
+        @include margin-top(-3px);
+    }
+   
+}
+
+
+.vk-navbar-creative.vk-navbar-static .vk-navbar-aside-outer, .vk-navbar-creative.vk-navbar-static .vk-navbar-main-outer {
+    @include padding(0, 15px, 0, 15px);
+}
+
+.vk-navbar-creative.vk-navbar-static .vk-navbar-aside {
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-aside, .vk-navbar-creative.vk-navbar-static .vk-navbar-main {
+   @include position-relative;
+   @include displayflex;
+   @include margin-left(auto);
+   @include margin-right(auto);
+    max-width: 1170px;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-aside-element {
+   @include displayflex;
+    align-items: center;
+    @include justify-content-flexend;
+}
+.vk-navbar-aside-element > div {
+    @include margin-left(18px);
+}
+button{
+    font-size: 24px;
+}

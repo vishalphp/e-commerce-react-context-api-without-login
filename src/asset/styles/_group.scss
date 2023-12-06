@@ -1,0 +1,207 @@
+
+/*
+* Element groups
+*/
+html .group {
+	margin-bottom: -10px;
+	margin-left: -10px;
+}
+
+html .group:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+html .group-xs {
+	margin-bottom: -15px;
+	margin-left: -15px;
+}
+
+html .group-xs:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group-xs > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+
+html .group-sm {
+	margin-bottom: -10px;
+	margin-left: -20px;
+}
+
+html .group-sm:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group-sm > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+html .group-sm-2 {
+	margin-left: -15px;
+}
+
+@media (min-width: 576px) {
+	html .group-sm-2 {
+		margin-bottom: -10px;
+		margin-left: -20px;
+	}
+	html .group-sm-2:empty {
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+	html .group-sm-2 > * {
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+}
+
+html .group-md {
+	margin-bottom: -20px;
+	margin-left: -25px;
+}
+
+html .group-md:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group-md > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 20px;
+	margin-left: 25px;
+}
+
+html .group-lg {
+	margin-bottom: -20px;
+	margin-left: -30px;
+}
+
+html .group-lg:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group-lg > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+html .group-xl {
+	margin-bottom: -30px;
+	margin-left: -40px;
+}
+
+html .group-xl:empty {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+html .group-xl > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 30px;
+	margin-left: 40px;
+}
+
+html .group-middle {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+html .group-button-1 {
+	display: flex;
+}
+
+html .group-justify {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+html .group-custom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+html .group-custom > * {
+	flex: 0 1 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+@media (min-width: 576px) {
+	html .group-custom {
+		flex-wrap: nowrap;
+	}
+	html .group-custom > * {
+		flex: 1 1 auto;
+	}
+}
+
+.group-button-1 .button {
+	flex-grow: 1;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+* + .group {
+	margin-top: 30px;
+}
+
+* + .group-xs {
+	margin-top: 30px;
+}
+
+* + .group-sm {
+	margin-top: 30px;
+}
+
+* + .group-sm-2 {
+	margin-top: 30px;
+}
+
+* + .group-md {
+	margin-top: 30px;
+}
+
+* + .group-lg {
+	margin-top: 30px;
+}
+
+* + .group-xl {
+	margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+	h3 + .group-xs {
+		margin-top: 45px;
+	}
+}

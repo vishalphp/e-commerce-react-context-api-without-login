@@ -1,0 +1,28 @@
+@import '../variable';
+@import '../mixins/position-mixin';
+@import '../mixins/display-mixin';
+
+.vk-navbar-creative.vk-navbar-static .vk-navbar-collapse, .vk-navbar-creative.vk-navbar-static .vk-navbar-aside-element {
+    @include flex(0%, 0%, 40%, 40%);
+    font-size: 15px;
+    @include displayflex;
+}
+.vk-navbar-creative.vk-navbar-static .vk-navbar-collapse{
+        justify-content: center;
+}
+.vk-navbar-creative.vk-navbar-static .contacts-classic {
+    text-align: left;
+}
+.contacts-classic {
+    color: $color-black;
+}
+.contacts-classic a, .contacts-classic a:focus, .contacts-classic a:active {
+    color: $color-black;
+}
+.contacts-classic-title {
+    font-weight: 700;
+    color: $color-black;
+}
+.vk-navbar-static .vk-navbar-basket-mobile {
+   @include displaynone;
+}

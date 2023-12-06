@@ -1,0 +1,41 @@
+@mixin margin-top($top: auto){
+ margin-top: $top;
+}
+@mixin margin-right($right: auto){
+    margin-right: $right;
+}
+@mixin margin-bottom($bottom: auto){
+    margin-bottom: $bottom;
+   }
+@mixin margin-left($left: auto){
+    margin-left:$left;
+   }
+@mixin margin-interpolation($position, $valu){
+    margin-#{$position}:$valu;
+   }
+
+@mixin padding-top($top: auto){
+    padding-top: $top ;
+}
+@mixin padding-right($right: auto){
+    margin-right:$right;
+}
+@mixin padding-bottom($bottom: auto){
+   padding-bottom: $bottom;
+}
+@mixin padding-left($left: auto){
+    padding-left: $left;
+}
+@mixin padding-interpolation($position, $valu){
+    padding-#{$position}:$valu;
+   }
+
+@mixin padding($top: auto, $right: auto, $bottom: auto, $left: auto){
+ padding: $top $right $bottom $left;
+}
+@mixin margin($top: auto, $right: auto, $bottom: auto, $left: auto){
+    margin: $top $right $bottom $left;
+   }
+@mixin top($top){
+    top: $top;
+}

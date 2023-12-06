@@ -1,0 +1,43 @@
+.breadcrumbs-custom-footer {
+    padding: 15px 0;
+    background: #f9faf9;
+}
+.breadcrumbs-custom-path {
+    text-align: center;
+}
+.makeleft .breadcrumbs-custom-path{
+    text-align: left;
+}
+.breadcrumbs-custom-path a, .breadcrumbs-custom-path a:active, .breadcrumbs-custom-path a:focus {
+    color: #777777;
+}
+.breadcrumbs-custom-path a {
+    display: inline;
+}
+.breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 600;
+    letter-spacing: .13em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+}
+.breadcrumbs-custom-path > * {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.breadcrumbs-custom-path li::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    font-size: 14px;
+    line-height: 1.72;
+    font-family: "Material Design Icons";
+    color: #151515;
+    transform: translate3d(50%, -50%, 0);
+}
