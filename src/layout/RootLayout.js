@@ -13,14 +13,11 @@ export default function RootLayout() {
   useEffect(()=>{
 
     setLoader(true);
-
-    return ()=>{
-       setTimeout(()=>{
+     setTimeout(()=>{
         setLoader(false);
        }, 1000);
-    }
-
-  },[cartContextData]);
+  
+  },[cartContextData.cartCtxData.products]);
  
 
   return (

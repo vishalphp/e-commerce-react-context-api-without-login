@@ -1,5 +1,7 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useContext} from 'react';
 import useFirebase from '../../useFirebase';
+import Login from '../../components/account/Login';
+import LoginContext from '../../context/LoginContext';
 
 export default function CheckoutForm({submitClickRefHandler}) {
 
@@ -20,6 +22,8 @@ export default function CheckoutForm({submitClickRefHandler}) {
   const [delemail, setDelemail] = useState("");
   const [delphone, setDelphone] = useState("");
   const [error,setError] = useState([]);
+
+  const loginCtx = useContext(LoginContext);
 
   useEffect(()=>{
     const scrollElement = document.getElementById("checkoutform");
@@ -121,10 +125,14 @@ export default function CheckoutForm({submitClickRefHandler}) {
 
   return (
     <>
-     
+   
 
      <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
+
+      {loginCtx.logindata.token ? <h2>Joinned With Account</h2> : ''}   
+       <Login />
+
           { error.length > 0 ? <div className='error'>Some fields are required.</div> : '' }
         <form id="checkoutform" name="checkout" onSubmit={formCheckoutSubmitHandler}>
           <div class="row row-50 justify-content-center">

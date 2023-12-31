@@ -13,6 +13,11 @@ import ProductContext from './context/ProductContext';
 import useFirebase from './useFirebase';
 import loading from './asset/images/loading.gif';
 import NotFound from './pages/NotFound';
+import Account from './components/account/Account';
+import Profile from './components/account/users/Profile';
+import Orders from './components/account/users/Orders';
+import Common from './components/account/users/Common';
+import LoginRegister from './components/account/LoginRegister';
 
 
 const RootLayoutLazy = lazy(()=> import("./layout/RootLayout"));
@@ -33,7 +38,6 @@ function App() {
     //productContextData.setProductsList(getProducts(db));
   },[firebaseData.getProductsList]);
 
-  //console.log(productContextData.productsList.response);
 
   return (
     <div className="App">
@@ -46,7 +50,13 @@ function App() {
              <Route path='cart' element={<Cart />} />
              <Route path='checkout' element={<Checkout />} />
              <Route path='thankyou' element={<ThankYou />} />
+             <Route path="login" element={<LoginRegister />} />
+             <Route path="account" element={<Account />} >
+               <Route path='profile' element={<Profile />} />
+               <Route path='orders' element={<Orders />} />
+             </Route>
              <Route path='*' element={<NotFound />} />
+
         </Route>
       </Routes>
       : <div className='loadingbg'><div className='midloader'><img src={loading} alt='loading...' /></div></div>

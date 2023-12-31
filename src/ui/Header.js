@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../asset/styles/ui/header.scss';
 import Logo from '../components/logo/Logo';
 import HeaderAbout from '../components/headerabout/HeaderAbout';
@@ -6,8 +6,21 @@ import HeaderSearch from '../components/search/HeaderSearch';
 import HeaderCart from '../components/basket/HeaderCart';
 import HeaderLang from '../components/langauge/HeaderLang';
 import Menu from '../components/navigation/Menu';
+import HeaderAccount from '../components/account/HeaderAccount';
+import { FiLogOut } from "react-icons/fi";
+import LoginContext from '../context/LoginContext';
+import useFirebase from '../useFirebase';
 
 export default function Header() {
+  const loginCtx = useContext(LoginContext);
+  const firbase = useFirebase();
+
+
+  const runsigoutHandler = async() =>{
+    await firbase.signOutFunction();
+  }
+
+
   return (
     <>
     
@@ -20,9 +33,12 @@ export default function Header() {
                 <Logo />
                 <HeaderAbout />
                 <div className="vk-navbar-aside-element">
-                   <HeaderSearch />
+                   <HeaderAccount />
                    <HeaderCart />
                    <HeaderLang />
+                   <div className='signoutbox'>
+                   {loginCtx.logindata.token? <span className='sigount' onClick={runsigoutHandler}><FiLogOut /></span> :''}
+                   </div>
                 </div>
               </div>
             </div>

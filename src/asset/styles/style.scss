@@ -215,6 +215,9 @@ html .group-md {
     margin: auto;
     width: 100%;
 }
+a.accountlin{
+    font-size: 28px;
+}
 .row {
     @include displayflex{
         flex-wrap: wrap;
@@ -431,6 +434,9 @@ flex-direction: row-reverse;
     margin: 40px 0;
     color: $color-blue;
 }
+.headeraccount{
+    display: inline-block;
+}
 .loadingwithoutbg{
     position:fixed;
     width:100%;
@@ -458,6 +464,15 @@ flex-direction: row-reverse;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.sigount{
+    cursor: pointer;
+}
+.defultlogin{
+    padding: 10px 0px 25px;
+        color: blue;
+        font-size: 12px;
 }
 
 @-webkit-keyframes spin {
