@@ -12,7 +12,7 @@ export default function Sectionone() {
             <div class="box-info-renee-decor"></div>
             <div class="box-info-renee-subtitle wow fadeInLeft">Most Popular Cosmetic &amp; Cologne Brands</div>
             <h2 class="box-info-renee-title wow fadeScale">Best Fragrances</h2>
-            <p class="box-info-renee-text wow fadeInRight">Cosmetics is the place where you can get high-quality fragrances from certified consultants, who are not just professionals but also talented masters.</p><a class="link-classic box-info-renee-link wow fadeInUp" href="https://livedemo00.template-help.com/wt_prod-21760/index.html#" >view collection</a>
+            <p class="box-info-renee-text wow fadeInRight">Cosmetics is the place where you can get high-quality fragrances from certified consultants, who are not just professionals but also talented masters.</p><a class="link-classic box-info-renee-link wow fadeInUp" href="#" >view collection</a>
           </div>
         </div>
       </section>

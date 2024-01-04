@@ -31,7 +31,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <div className="contacts-holly-title">Address</div>
-                    <div className="contacts-holly-text"><a href="http://localhost:3000/index.html#">453 Ave, 2th Floor<br />CA 9xxx1 USA</a></div>
+                    <div className="contacts-holly-text"><a href="http://localhost:3000">453 Ave, 2th Floor<br />CA 9xxx1 USA</a></div>
                   </li>
                   <li>
                     <div className="contacts-holly-title">E-mail</div>
@@ -42,11 +42,11 @@ export default function Footer() {
               <div className="col-sm-5 col-lg-2 wow fadeInRight" data-wow-delay=".2s">
                 <h4 className="footer-creative-title">Menu</h4>
                 <ul className="footer-creative-list">
-                  <li><a href="http://localhost:3000/index.html#">History</a></li>
-                  <li><a href="http://localhost:3000/our-team.html">Our Team</a></li>
-                  <li><a href="http://localhost:3000/index.html#">FAQ</a></li>
-                  <li><a href="http://localhost:3000/index.html#">Products</a></li>
-                  <li><a href="http://localhost:3000/index.html#">Events</a></li>
+                  <li><a href="http://localhost:3000">History</a></li>
+                  <li><a href="http://localhost:3000">Our Team</a></li>
+                  <li><a href="http://localhost:3000">FAQ</a></li>
+                  <li><a href="http://localhost:3000">Products</a></li>
+                  <li><a href="http://localhost:3000">Events</a></li>
                 </ul>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="container">
             <div className="row row-10 align-items-center justify-content-sm-between">
               <div className="col-sm-auto">
-                <p className="rights"><span>©&nbsp; </span><span className="copyright-year">2023</span><span>&nbsp;</span><span>Cosmetic</span><span>.&nbsp; All rights reserved.</span><span>&nbsp;</span><a href="http://localhost:3000/terms-of-use.html">Privacy Policy</a></p>
+                <p className="rights"><span>©&nbsp; </span><span className="copyright-year">2023</span><span>&nbsp;</span><span>Cosmetic</span><span>.&nbsp; All rights reserved.</span><span>&nbsp;</span><a href="http://localhost:3000">Privacy Policy</a></p>
               </div>
               <div className="col-sm-auto">
                 <ul className="list-inline list-social list-inline-sm socialsm">
