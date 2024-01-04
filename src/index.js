@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ProductContextProvider } from './context/ProductContext';
 import { CartContextProvider } from './context/CartContext';
 import { LoginContextProvider } from './context/LoginContext';
+//import { register as registerServiceWorker } from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

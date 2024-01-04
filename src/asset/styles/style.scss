@@ -474,6 +474,25 @@ flex-direction: row-reverse;
         color: blue;
         font-size: 12px;
 }
+.orderwrap, .shipwrap, .billwrap{
+    width: 230px;
+}
+.orderwrap img{
+    width: 50px;
+}
+.orderwrap > div, .shipwrap > div, .billwrap > div{
+    padding: 5px;
+}
+.ordtabl td, .ordtabl th{
+    padding: 10px;
+}
+.ordtabl tr{
+    display: grid;
+    /* flex-direction: row; */
+grid-template-columns:  1fr 1fr 1fr 1fr 1fr ;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
 
 @-webkit-keyframes spin {
 	from {-webkit-transform:rotate(0deg);}

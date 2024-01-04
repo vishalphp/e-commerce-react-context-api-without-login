@@ -88,9 +88,9 @@ const useFirebase = () => {
           const colRef = collection(docRef, "orders")
           await addDoc(colRef, dataToInsert);
 
-          //cartContextData.removeCart();
+          cartContextData.removeCart();
           console.log('Document inserted successfully!'); 
-          //navigate("/"); 
+          navigate("/"); 
            
         } catch (error) {
           console.error('Error inserting document:', error.message);
@@ -268,6 +268,18 @@ const useFirebase = () => {
     
 
       }
+
+      const getOrdersByUserId = async(doc_id) =>{
+
+        let collectionRef = await collection(db, "users", doc_id, "orders");
+
+        const collectionSnapshot = await getDocs(collectionRef);
+        const collectionList = await collectionSnapshot.docs.map(doc => doc.data());
+
+        return collectionList;
+
+
+      }
      
      
 
@@ -281,7 +293,8 @@ const useFirebase = () => {
     checkAuthToken,
     publicProfileDataShow,
     updateUserProfile,
-    signOutFunction
+    signOutFunction,
+    getOrdersByUserId
   }
 
 }
