@@ -9,7 +9,7 @@ export default function Logo() {
     <div className="vk-navbar-panel">
                   <button className="vk-navbar-toggle toggle-original" data-vk-navbar-toggle=".vk-navbar-nav-wrap"><span></span></button>
                   <div className="vk-navbar-brand">
-                    <Link className="brand" to="http://localhost:3000/index.html"><img src={logo} alt="logo" /></Link>
+                    <Link className="brand" to="/"><img src={logo} alt="logo" /></Link>
                   </div>
                 </div>
     </>

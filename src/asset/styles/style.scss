@@ -503,3 +503,37 @@ border-bottom: 1px solid #ccc;
 	from {transform:rotate(0deg);}
 	to {transform:rotate(360deg);}
 }
+
+@media screen and (max-width: 768px) {
+   
+    .contacts-classNameic{
+        display: none;
+    }
+ .vk-navbar-brand img{
+    width: 100%;
+ }
+ h2, .heading-2, .counter-classic-number .symbol {
+    font-size: 26px;
+}
+.section-custom-1{
+    min-height: auto;
+}
+.parallax-content{
+top: 10%;
+}
+.title-parallax p, .title-parallax .box-info-renee-link{
+    display: none;
+}
+.container{
+    width: 95%;
+}
+.col-xl-3, .col-lg-3 {
+    flex: 1;
+    max-width: 100%;
+}
+footer .row {
+    flex-wrap: wrap;
+}
+
+
+  }
