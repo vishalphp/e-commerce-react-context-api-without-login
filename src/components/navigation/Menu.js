@@ -17,7 +17,7 @@ export default function Menu() {
                     <li className="vk-nav-item vk-navbar--has-dropdown vk-navbar-submenu"><Link className="vk-nav-link" to="http://localhost:3000">Pages</Link><span className="vk-navbar-submenu-toggle"></span>
                     
                     </li>
-                    <li className="vk-nav-item vk-navbar--has-megamenu vk-navbar-submenu"><Link className="vk-nav-link" to="http://localhost:3000/document">Document</Link><span className="vk-navbar-submenu-toggle"></span>
+                    <li className="vk-nav-item vk-navbar--has-megamenu vk-navbar-submenu"><Link className="vk-nav-link" to="/document">Document</Link><span className="vk-navbar-submenu-toggle"></span>
                      
                     </li>
                    
