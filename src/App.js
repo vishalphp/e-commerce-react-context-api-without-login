@@ -18,6 +18,7 @@ import Profile from './components/account/users/Profile';
 import Orders from './components/account/users/Orders';
 import Common from './components/account/users/Common';
 import LoginRegister from './components/account/LoginRegister';
+import Document from './pages/Document';
 
 
 const RootLayoutLazy = lazy(()=> import("./layout/RootLayout"));
@@ -51,6 +52,8 @@ function App() {
              <Route path='checkout' element={<Checkout />} />
              <Route path='thankyou' element={<ThankYou />} />
              <Route path="login" element={<LoginRegister />} />
+             <Route path="document" element={<Document />} />
+            
              <Route path="account" element={<Account />} >
                <Route path='profile' element={<Profile />} />
                <Route path='orders' element={<Orders />} />
